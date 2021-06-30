@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/whatsapp.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jscript.js"></script>
+</head>
+<body>
+    
+    <div >
+        <div class="sidebar" id="sidebar" style="display: none;background: rgb(223, 231, 222);color: rgb(33, 233, 123);position: absolute;top: 0px;bottom: 0px;right: 70%; left: 0px;">
+         <div id=sidebar-top>
+             <div id="sidebar_header">
+                <button  id="close" ><i class="fa fa-arrow-left"></i><h3>Profile</h3></button></div>
+                
+
+             <div id="sidebar_image">
+                 <img src="images/sujeet.jpg" alt="sujeet image">
+                 
+                 
+
+             </div>
+             <div class="sidebar_name"><h4>Your name</h4>
+                <input type="text" name="profileanme" id="profilename" value="Sujeet"><button><i class=" fa fa-pencil"></i></button>
+
+             </div>
+             <div class="title">
+                 <p>This is not your Username or pin.this name will be visible to your Chatbot contacts</p>
+
+             </div>
+             <div class="sidebar_name"><h4>About</h4>
+                <input type="text" name="profileanme" id="profilename" value="Where there's a will ,there's a way😊"><button><i class=" fa fa-pencil"></i></button>
+
+             </div>
+             
+
+
+         </div>   
+            
+            
+            
+        </div>
+
+        <header class="header">
+            <div style="padding-left:20px"><h5>Chatbot</h5></div>
+             </header>
+    
+        <header class="header-left">
+            <div class="header-top" styel="background-color:#cccccc7a">
+                
+               <div class="flex-container"> 
+                <button id="topimage"><img src="images/sujeet.jpg" alt="image"></button>
+                        <button class="icons" id="status"><i class="fa fa-circle-o-notch"></i></button>
+                        <button class ="icons" id="plus"><i class="fa fa-plus"></i></button>
+                        <button class="icons"id=" menu-bar2"><i class =" fa fa-bars"></i>
+                            <!-- <select name="menu" id="menu_bar2 " >
+                            <option value="New group">New group</option>
+                            <option value="Create room">Create room</option>
+                            <option value="Profile">Profile</option>
+                            <option value="Archived">Archived</option>
+                            <option value="Starred">Starred</option>
+                            <option value="Setting">Setting</option>
+                            <option value="Logout">Logout</option>
+                            
+                        </select> -->
+                            
+                
+                        </button>
+                </div>
+                
+            </div>
+            <div class="tabs">
+                <div class="serchtab"><i class="fa fa-search"></i><input type="text" name="search" id="search-bar" placeholder="  Search or start new chat"></div>
+
+                <div class="tablinks" onclick="openBoth(event,'default1', 'default','')" id="defaultOpen"></div>
+
+                <button onclick=" openBoth(event,'Sujeet1','Sujeet','footer','header')"   class="tablinks">
+                    <img src="images/sujeet.jpg" ><h4>Sujeet</h4>
+                    
+                <button onclick=" openBoth(event,'Bipin1','Bipin','footer','header')"  class="tablinks">
+                    <img src="images/bipin.png" ><h4>Bipin</h4></button>
+
+                <button onclick=" openBoth(event,'Rahul1','Rahul','footer','header')"  class="tablinks"><img src="images/Rahul.png" ><h4>Rahul</h4></button>
+                <button onclick=" openBoth(event,'Meghraj1','Meghraj','footer','header')"  class="tablinks"><img src="images/meghraj.png" ><h4>Meghraj</h4></button>
+                
+            </div>
+            
+        </header>
+        <header class="header-right">
+            <div id="default1" class="chat-head" ><h3>Welcome to chatbot</h3></div>
+            <div class="flex-container1 " id="header"> 
+                <button class="icons" id="camera"><i class="fa fa-video-camera"></i></button>
+                <button class ="icons" id="phone"><i class="fa fa-phone"></i></button>
+                <button class="icons" id="menu-bar1"><i class =" fa fa-bars"></i></button>
+                </div>
+        </div>
+            
+            <button class="chat-head" id="Sujeet1">
+                <img src="images/sujeet.jpg" ><h4>Sujeet</h4>
+            </button>
+            <button class="chat-head" id="Bipin1">
+                <img src="images/bipin.png" ><h4>Bipin</h4>
+            </button>
+            <button class="chat-head" id="Rahul1">
+                <img src="images/Rahul.png" ><h4>Rahul</h4>
+            </button>
+            <button class="chat-head" id="Meghraj1">
+                <img src="images/meghraj.png" ><h4>Meghraj</h4>
+            </button>
+            <div>
+                
+            
+        </header>
+            <div class="main-part">
+        <div class="chat-body" id="default" >
+            <img id="body-image" src="images/whatsapp-connected.png" alt="whatsapp Iamge">
+        </div>
+        <div class="contents  col-4" id="contents"  >
+            <section class="chat-body" id="Sujeet" >
+                <h2>SUJEET</h2>
+                <p>Admin of this Chatbot System and he is from Hazaribagh</p>
+            </section>
+            <section class="chat-body" id="Bipin">
+                <h2>BIPIN</h2>
+                <p>Bipin is from Hazaribagh</p>
+            </section>
+            <section class="chat-body" id="Rahul">
+                <h2>RAHUL</h2>
+                <p>Rahul  is from Hazaribagh</p>
+            </section>
+            <section class="chat-body" id="Meghraj">
+                <h2>MEGHRAJ</h2>
+                <p>Meghraj is from Rajasthan</p>
+            </section>
+            
+        </div>
+        <!-- <p id="textmsg" class="col-4" style="display:none;"></p> -->
+        <div id="input_text" class="col-4"></div>
+            </div>
+
+        
+        <footer class="footer-right" id="footer" >
+         <div class=footers>
+            
+                <button id="smile"><i class="fa fa-smile-o"></i></button>
+                <button id="attach"><i class="fa fa-paperclip"></i></button>
+            
+                  <input  id="text_input" type="text" placeholder="Type a meassage" name="search">
+                  <button  id="send" type="submit"><i class="fa fa-send"></i></button>
+                  <button type="submit"><i class="fa fa-microphone"></i></button>
+                
+         </div>
+        </footer>
+    </div>
+    <script>
+function openBoth(evt,a,b,c,d)
+{
+    openhead(evt,a);
+    openCity(evt,b);
+    topheader(evt,d);
+    footer(evt,c);
+}
+function topheader(evt,d)
+{
+
+    var i,h;
+    h=document.getElementsByClassName("flex-container1");
+    {
+        for (i = 0; i < h.length; i++)
+         {
+        h[i].style.display = "none";
+         }
+    }
+
+
+    document.getElementById(d).style.display="flex";
+    document.getElementById(d).style.flexDirection="row";
+    document.getElementById(d).style.justifyContent="flex-end";
+}
+
+
+
+function footer(evt,c){
+
+    document.getElementById(c).style.display = "block";
+
+
+}
+ 
+
+function openCity(evt,b) {
+
+var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("chat-body");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(b).style.display = "block";
+  evt.currentTarget.className += " active";
+
+
+
+}
+        
+ function openhead(evt,a)
+{
+        var i,x,tablinks,y,h;
+        x = document.getElementsByClassName("chat-head");
+        for (i = 0; i < x.length; i++)
+         {
+        x[i].style.display = "none";
+    }
+    y = document.getElementsByClassName("footer-right");
+        for (i = 0; i < y.length; i++)
+         {
+        y[i].style.display = "none";
+    }
+
+
+    
+     document.getElementById(a).style.display = "block";
+    
+     
+     
+
+
+}
+       
+        document.getElementById("defaultOpen").click();
+        
+
+      
+        </script>
+       
+</body>
+</html>
